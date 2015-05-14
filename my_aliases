@@ -1,0 +1,6 @@
+alias acc='app/console cache:clear'
+alias grjs='grunt requirejs'
+alias aad='app/console assetic:dump'
+alias aai='app/console assets:install'
+alias f_all='acc && grjs && aad && aai '
+alias sf='app/console'

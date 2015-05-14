@@ -1,0 +1,61 @@
+# make executable
+alias ax="chmod a+x"
+# edit .bash_profile
+alias bp="$EDITOR ~/.bash_profile"
+# edit keybindings.dict
+alias kb="$EDITOR ~/Library/KeyBindings/DefaultKeyBinding.dict"
+# reload your bash config
+alias src="source ~/.bash_profile"
+
+
+#copy output of last command to clipboard
+alias cl="fc -e -|pbcopy"
+
+# top
+alias cpu='top -o cpu'
+alias mem='top -o rsize' # memory
+
+# copy the working directory path
+alias cpwd='pwd|tr -d "\n"|pbcopy'
+
+# DNS (with update thanks to @blanco)
+alias flush="sudo killall -HUP mDNSResponder"
+
+# share history between terminal sessions
+alias he="history -a" # export history
+alias hi="history -n" # import history
+
+# Get your current public IP
+alias ip="curl icanhazip.com"
+
+# ls better
+alias la="ls -aF"
+alias ld="ls -ld"
+alias ll="ls -l"
+alias lt='ls -At1 && echo "------Oldest--"'
+alias ltr='ls -Art1 && echo "------Newest--"'
+
+# mute the system volume
+alias stfu="osascript -e 'set volume output muted true'"
+
+# time machine log
+alias tmlog="syslog -F '\$Time \$Message' -k Sender com.apple.backupd-auto -k Time ge -30m | tail -n 1"
+
+# trim newlines
+alias tn='tr -d "\n"'
+
+# list TODO/FIX lines from the current project
+alias todos="ack -n --nogroup '(TODO|FIX(ME)?):'"
+
+# create a Taskpaper todo file in the current folder
+alias tp='touch todo.taskpaper && open -a "Taskpaper" todo.taskpaper'
+
+# interactive fasd
+alias zi="fasd -e cd -i"
+
+#folder navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias back='cd $OLDPWD'
+
+alias c='clear'
