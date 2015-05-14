@@ -13,7 +13,7 @@ compinit
 # End of lines added by compinstall
 
 # Antigen
-source ~/docs/antigen.zsh
+source ~/dotfiles/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
