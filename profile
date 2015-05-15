@@ -21,6 +21,8 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# set EDITOR to vim
+export EDITOR='vim'
 #set TERM
 #if [ -e /usr/share/terminfo/x/xterm-256color ]; then
 #        export TERM='xterm-256color'
