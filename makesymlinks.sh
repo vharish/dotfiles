@@ -29,3 +29,15 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+file="$HOME/bin/battery"
+if [ -f "$file" ]
+then
+    echo 'Setting up tmux battery status..'
+    curl -OL https://raw.github.com/richo/battery/master/bin/battery
+    mv battery ~/bin/battery
+    chmod +x ~/bin/battery
+    echo 'Tmux battery setup done'
+fi
+
+echo 'Setup finished'
