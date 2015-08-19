@@ -33,7 +33,7 @@ antigen bundle zsh-users/zsh-completions src
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen theme robbyrussell
+antigen theme amuse
 
 # Tell antigen that you're done.
 antigen apply
@@ -46,6 +46,11 @@ fi
 # Add custom aliases.
 if [ -f ~/.my_aliases ]; then
     source ~/.my_aliases
+fi
+
+# Add shell function aliases.
+if [ -f ~/.aliases.zsh ]; then
+    source ~/.aliases.zsh
 fi
 
 # Add profile settings
