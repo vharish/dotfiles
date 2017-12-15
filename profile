@@ -33,3 +33,7 @@ export EDITOR='vim'
 # Setting for the new UTF-8 terminal support in Lion
 LC_CTYPE=en_US.UTF-8
 LC_ALL=en_US.UTF-8
+alias devdb='mysql --defaults-file=~/.config/sql/mysql-dev.conf -A'
+alias ckall="./CodeSniffer/scripts/phpcs '--ignore=Resources/public,Symfony/src/Stockopedia/Common/AppBundle/Resources/*' --standard=PSR2 -n Symfony/src/Stockopedia/ArchiveBundle Symfony/src/Stockopedia/BatchBundle Symfony/src/Stockopedia/BlogSyndicationBundle Symfony/src/Stockopedia/Common Symfony/src/Stockopedia/DdlBundle Symfony/src/Stockopedia/DemoBundle Symfony/src/Stockopedia/FtpBundle Symfony/src/Stockopedia/MonitorBundle Symfony/src/Stockopedia/NewsBundle Symfony/src/Stockopedia/PdfBundle Symfony/src/Stockopedia/QuotesBundle Symfony/src/Stockopedia/ScreenBundle Symfony/src/Stockopedia/SearchBundle Symfony/src/Stockopedia/Security Symfony/src/Stockopedia/SiteBundle Symfony/src/Stockopedia/SystemBundle Symfony/src/Stockopedia/TechnicalsBundle"
+alias ckcode="./CodeSniffer/scripts/phpcs '--ignore=Resources/public,Symfony/src/Stockopedia/Common/AppBundle/Resources/*' --standard=PSR2 -n "
+alias gdc='git diff --cached'

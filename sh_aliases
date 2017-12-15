@@ -26,7 +26,7 @@ alias he="history -a" # export history
 alias hi="history -n" # import history
 
 # Get your current public IP
-alias ip="curl icanhazip.com"
+alias myip="curl icanhazip.com"
 
 # ls better
 alias la="ls -aF"
