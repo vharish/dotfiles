@@ -3,3 +3,5 @@
 	email = i_v_harish@yahoo.co.in
 [alias]
 	ci = commit
+[push]
+	default = simple
