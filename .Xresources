@@ -1,0 +1,235 @@
+!DejaVu Sans Mono Fonts {{{
+! }}}
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.hintstyle: hintfull
+Xft.dpi:       180
+
+! URxvt.font: xft:DejaVu Sans Mono:size=10
+URxvt.font: xft:Source Code Pro:size=10
+! URxvt.scrollBar: false
+
+! Xcursor.theme: whiteglass
+! Xcursor.size: 25
+
+!-------------------------------------------------------------------------------
+! Xft settings
+!-------------------------------------------------------------------------------
+
+! Xft.dpi:                    160
+! Xft.antialias:              false
+! Xft.rgba:                   rgb
+! Xft.hinting:                true
+! Xft.hintstyle:              hintslight
+
+!-------------------------------------------------------------------------------
+! URxvt settings
+! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
+! More info at:
+! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
+!-------------------------------------------------------------------------------
+
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.transparent:          false
+URxvt.fading:               0
+! URxvt.urgentOnBell:         true
+! URxvt.visualBell:           true
+URxvt.loginShell:           true
+URxvt.saveLines:            50
+URxvt.internalBorder:       0
+URxvt.lineSpace:            0
+
+! Fonts
+URxvt.allow_bold:           false
+/* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
+! URxvt.font: xft:Source Code Pro:size=12
+! URxvt.boldFont: xft:Source Code Pro Bold:size=12
+
+! Fix font space
+! URxvt*letterSpace: -1
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+! Perl extensions
+URxvt.perl-ext-common:      default,matcher
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          google-chrome-stable
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         true
+
+!!Source http://github.com/altercation/solarized
+
+*background: #002b36
+*foreground: #657b83
+!!*fading: 40
+*fadeColor: #002b36
+*cursorColor: #93a1a1
+*pointerColorBackground: #586e75
+*pointerColorForeground: #93a1a1
+
+!! black dark/light
+*color0: #073642
+*color8: #002b36
+
+!! red dark/light
+*color1: #dc322f
+*color9: #cb4b16
+
+!! green dark/light
+*color2: #859900
+*color10: #586e75
+
+!! yellow dark/light
+*color3: #b58900
+*color11: #657b83
+
+!! blue dark/light
+*color4: #268bd2
+*color12: #839496
+
+!! magenta dark/light
+*color5: #d33682
+*color13: #6c71c4
+
+!! cyan dark/light
+*color6: #2aa198
+*color14: #93a1a1
+
+!! white dark/light
+*color7: #eee8d5
+*color15: #fdf6e3
+
+! special
+*.foreground:   #ffffff
+*.background:   #232425
+*.cursorColor:  #ffffff
+
+! black
+*.color0:       #20201d
+*.color8:       #7d7a68
+
+! red
+*.color1:       #d73737
+*.color9:       #d73737
+
+! green
+*.color2:       #60ac39
+*.color10:      #60ac39
+
+! yellow
+*.color3:       #cfb017
+*.color11:      #cfb017
+
+! blue
+*.color4:       #6684e1
+*.color12:      #6684e1
+
+! magenta
+*.color5:       #b854d4
+*.color13:      #b854d4
+
+! cyan
+*.color6:       #1fad83
+*.color14:      #1fad83
+
+! white
+*.color7:       #a6a28c
+*.color15:      #fefbec
+
+urxvt*foreground: white
+urxvt*background: #232425
+
+*color0:  #2E3436
+*color1:  #a40000
+*color2:  #4E9A06
+*color3:  #C4A000
+*color4:  #3465A4
+*color5:  #75507B
+*color6:  #ce5c00
+*color7:  #babdb9
+*color8:  #555753
+*color9:  #EF2929
+*color10: #8AE234
+*color11: #FCE94F
+*color12: #729FCF
+*color13: #AD7FA8
+*color14: #fcaf3e
+*color15: #EEEEEC
+
+!! --- ~/.Xresources ------------------------------------------------------------
+!! ------------------------------------------------------------------------------
+!! --- generated with 4bit Terminal Color Scheme Designer -----------------------
+!! ------------------------------------------------------------------------------
+!! --- http://ciembor.github.com/4bit -------------------------------------------
+!! ------------------------------------------------------------------------------
+!
+!! --- special colors ---
+!
+!*background: #0d1926
+!*foreground: #d9e6f2
+!
+!! --- standard colors ---
+!
+!! black
+!*color0: #000000
+!
+!! bright_black
+!*color8: #262626
+!
+!! red
+!*color1: #b87a7f
+!
+!! bright_red
+!*color9: #dbbdbf
+!
+!! green
+!*color2: #80b87a
+!
+!! bright_green
+!*color10: #bfdbbd
+!
+!! yellow
+!*color3: #b8b37a
+!
+!! bright_yellow
+!*color11: #dbd9bd
+!
+!! blue
+!*color4: #7a7fb8
+!
+!! bright_blue
+!*color12: #bdbfdb
+!
+!! magenta
+!*color5: #b27ab8
+!
+!! bright_magenta
+!*color13: #d9bddb
+!
+!! cyan
+!*color6: #7ab8b3
+!
+!! bright_cyan
+!*color14: #bddbd9
+!
+!! white
+!*color7: #e2e2e2
+!
+!! bright_white
+!*color15: #ffffff
+!
+!
+!! ------------------------------------------------------------------------------
+!! --- end of terminal colors section -------------------------------------------
+!! ------------------------------------------------------------------------------
+
