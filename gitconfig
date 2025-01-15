@@ -1,7 +1,10 @@
 [user]
-	name = vharish
-	email = i_v_harish@yahoo.co.in
+	name = Venkata Harish I
+	email = i.v.harish@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
 [alias]
 	ci = commit
-[push]
-	default = simple
+	st = status
