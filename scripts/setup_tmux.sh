@@ -19,15 +19,19 @@ setup_tmux() {
         git clone https://github.com/tmux-plugins/tpm "$TPM_DIR"
     fi
 
-    # Create tmux config directory
+    # Create tmux directories
     mkdir -p "$CONFIG_DIR/tmux"
+    mkdir -p "$HOME/.local/share/tmux/resurrect"
 
     # Link configuration
     create_symlink "$DOTFILES_DIR/config/tmux/tmux.conf" "$CONFIG_DIR/tmux/tmux.conf"
 
     # Install plugins automatically
     echo "Installing tmux plugins..."
-    "$TPM_DIR/bin/install_plugins"
+    tmux start-server
+    tmux new-session -d
+    "$TPM_DIR/scripts/install_plugins.sh" > /dev/null 2>&1
+    tmux kill-server
 
     echo "Tmux setup complete!"
 }
