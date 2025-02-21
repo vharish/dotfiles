@@ -10,6 +10,7 @@ source "${DOTFILES_DIR}/scripts/utils.sh"
 source "${DOTFILES_DIR}/scripts/setup_vim.sh"
 source "${DOTFILES_DIR}/scripts/setup_fish.sh"
 source "${DOTFILES_DIR}/scripts/setup_git.sh"
+source "${DOTFILES_DIR}/scripts/setup_tmux.sh"
 
 # Detect OS
 OS=$(detect_os)
@@ -22,5 +23,6 @@ mkdir -p "$CONFIG_DIR"
 setup_vim
 setup_fish
 setup_git
+setup_tmux
 
 echo "Dotfiles installation complete!"
