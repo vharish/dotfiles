@@ -17,9 +17,9 @@ yabai -m config window_gap                  12
 
 # Create spaces and label them
 yabai -m space 1 --label code
-yabai -m space 2 --label web
-yabai -m space 3 --label term
-yabai -m space 4 --label chat
+yabai -m space 2 --label term
+yabai -m space 3 --label web
+yabai -m space 4 --label web2
 yabai -m space 5 --label media
 
 # Exclude apps from being managed

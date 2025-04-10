@@ -7,16 +7,19 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "${DOTFILES_DIR}/scripts/utils.sh"
 
 # Source setup scripts
+source "${DOTFILES_DIR}/scripts/setup_bash.sh"
 source "${DOTFILES_DIR}/scripts/setup_vim.sh"
 source "${DOTFILES_DIR}/scripts/setup_fish.sh"
 source "${DOTFILES_DIR}/scripts/setup_git.sh"
 source "${DOTFILES_DIR}/scripts/setup_tmux.sh"
+source "${DOTFILES_DIR}/scripts/setup_ghostty.sh"
+source "${DOTFILES_DIR}/scripts/setup_yabai.sh"
 
 # Help function
 print_help() {
     echo "Usage: $0 [OPTIONS]"
     echo "Options:"
-    echo "  -s, --setup COMPONENT   Setup specific component (vim|fish|git|tmux)"
+    echo "  -s, --setup COMPONENT   Setup specific component (bash|vim|fish|git|tmux|ghostty|yabai)"
     echo "  -f, --force            Force setup all components"
     echo "  -h, --help             Print this help message"
     echo ""
@@ -26,10 +29,13 @@ print_help() {
 # Dry run function
 dry_run() {
     echo "The following components are available for setup:"
+    echo "  - Bash configuration"
     echo "  - Vim configuration"
     echo "  - Fish shell configuration"
     echo "  - Git configuration"
     echo "  - Tmux configuration"
+    echo "  - Ghostty configuration"
+    echo "  - Yabai configuration"
     echo ""
     echo "To install all components, use: $0 --force"
     echo "To install a specific component, use: $0 --setup COMPONENT"
@@ -71,6 +77,9 @@ mkdir -p "$CONFIG_DIR"
 if [ -n "$COMPONENT" ]; then
     echo "Setting up $COMPONENT for $OS..."
     case $COMPONENT in
+        bash)
+            setup_bash
+            ;;
         vim)
             setup_vim
             ;;
@@ -83,6 +92,12 @@ if [ -n "$COMPONENT" ]; then
         tmux)
             setup_tmux
             ;;
+        ghostty)
+            setup_ghostty
+            ;;
+        yabai)
+            setup_yabai
+            ;;
         *)
             echo "Invalid component: $COMPONENT"
             print_help
@@ -92,10 +107,13 @@ if [ -n "$COMPONENT" ]; then
     echo "$COMPONENT setup complete!"
 elif [ "$FORCE" = true ]; then
     echo "Setting up all components for $OS..."
+    setup_bash
     setup_vim
     setup_fish
     setup_git
     setup_tmux
+    setup_ghostty
+    setup_yabai
     echo "All components setup complete!"
 else
     dry_run

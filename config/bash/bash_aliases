@@ -1,0 +1,21 @@
+# Git aliases
+alias gst='git status'
+alias gco='git checkout'
+alias gci='git commit -m'
+alias gau='git add -u'
+
+# Navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias back='cd $OLDPWD'
+
+# System
+alias c='clear'
+alias la="ls -aF"
+alias ll="ls -l"
+alias lt='ls -At1 && echo "------Oldest--"'
+alias ltr='ls -Art1 && echo "------Newest--"'
+alias myip="curl icanhazip.com"
+
+# Copy working directory path
+alias cpwd='pwd|tr -d "\n"|pbcopy'

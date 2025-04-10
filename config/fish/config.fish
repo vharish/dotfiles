@@ -1,4 +1,5 @@
 # ~/dotfiles/config/fish/config.fish
+# /opt/homebrew/bin/brew shellenv | source
 
 # Initialize Fisher if installed
 if not functions -q fisher
