@@ -30,4 +30,7 @@ setup_yabai() {
     echo "Note: You need to enable accessibility permissions for yabai and skhd in System Preferences > Security & Privacy > Privacy > Accessibility"
 }
 
-setup_yabai
+# Run setup only if the script is executed directly
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    setup_yabai
+fi

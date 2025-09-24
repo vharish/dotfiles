@@ -7,7 +7,10 @@ BACKUP_DIR="$HOME/.dotfiles_backup/$(date +%Y%m%d_%H%M%S)"
 
 # Detect OS
 detect_os() {
-    if [[ "$OSTYPE" == "darwin"* ]]; then
+    # Check for WSL by looking for "Microsoft" or "WSL" in the kernel release information
+    if grep -qE "(Microsoft|WSL)" /proc/version &> /dev/null; then
+        echo "wsl"
+    elif [[ "$OSTYPE" == "darwin"* ]]; then
         echo "macos"
     elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
         echo "linux"
@@ -45,7 +48,7 @@ install_package() {
     echo "Installing $package..."
     if [ "$os" = "macos" ]; then
         brew install "$package"
-    elif [ "$os" = "linux" ]; then
+    elif [ "$os" = "linux" ] || [ "$os" = "wsl" ]; then
         sudo apt-get update && sudo apt-get install -y "$package"
     fi
 }
