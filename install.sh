@@ -14,6 +14,7 @@ source "${DOTFILES_DIR}/scripts/setup_git.sh"
 source "${DOTFILES_DIR}/scripts/setup_tmux.sh"
 source "${DOTFILES_DIR}/scripts/setup_ghostty.sh"
 source "${DOTFILES_DIR}/scripts/setup_yabai.sh"
+source "${DOTFILES_DIR}/scripts/setup_fzf.sh"
 
 # --- Help Function ---
 print_help() {
@@ -28,7 +29,7 @@ print_help() {
     echo "  -h, --help              Display this help message and exit."
     echo ""
     echo "Available Components:"
-    echo "  bash, vim, fish, git, tmux, ghostty, yabai"
+    echo "  bash, vim, fish, git, tmux, fzf, ghostty, yabai"
     echo ""
     echo "Examples:"
     echo "  ./install.sh                # Perform a dry run to see what would be installed."
@@ -48,6 +49,7 @@ dry_run() {
     echo "  - Fish"
     echo "  - Git"
     echo "  - Tmux"
+    echo "  - fzf (fuzzy finder)"
 
     if [[ "$OS" == "macos" ]]; then
         echo "  - Ghostty"
@@ -116,7 +118,7 @@ OS=$(detect_os)
 if [ -n "$COMPONENT" ]; then
     echo "Setting up $COMPONENT for $OS..."
     case $COMPONENT in
-        bash|vim|fish|git|tmux)
+        bash|vim|fish|git|tmux|fzf)
             "setup_$COMPONENT"
             ;;
         ghostty)
@@ -149,6 +151,7 @@ elif [ "$FORCE" = true ]; then
     setup_fish
     setup_git
     setup_tmux
+    setup_fzf
 
     if [[ "$OS" == "wsl" ]]; then
         echo "Skipping Ghostty and Yabai setup on WSL."

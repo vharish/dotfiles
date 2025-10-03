@@ -17,3 +17,7 @@ end
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/harishimmadi/google-cloud-sdk/path.fish.inc' ]; . '/Users/harishimmadi/google-cloud-sdk/path.fish.inc'; end
+
+# The next line updates PATH for the pyenv home dir.
+set -Ux PYENV_ROOT $HOME/.pyenv
+set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths

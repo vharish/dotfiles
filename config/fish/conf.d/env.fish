@@ -5,7 +5,12 @@ set -gx EDITOR vim
 set -gx VISUAL vim
 set -x LANG en_US.UTF-8
 
-# Add to PATH if needed
+# Add fzf to PATH if it exists
+if test -d "$HOME/.fzf/bin"
+    set -gx PATH $HOME/.fzf/bin $PATH
+end
+
+# Add user's local bin to PATH
 set -gx PATH $HOME/.local/bin $PATH
 
 # OS specific settings
