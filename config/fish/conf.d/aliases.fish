@@ -1,5 +1,8 @@
+alias g 'git'
 alias gst 'git status'
 alias gau 'git add -u'
+alias ga 'git add'
 alias gd 'git diff'
 alias gdc 'git diff --cached'
 alias gci 'git commit -m'
+alias gco 'git checkout'

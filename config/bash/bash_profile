@@ -13,3 +13,4 @@ export LANG=en_US.UTF-8
 # Added by Windsurf
 export PATH="/Users/harishimmadi/.codeium/windsurf/bin:$PATH"
 . "/Users/harishimmadi/.deno/env"
+. "$HOME/.cargo/env"

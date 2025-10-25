@@ -40,3 +40,4 @@ shopt -s histappend
 # Check window size
 shopt -s checkwinsize
 . "/Users/harishimmadi/.deno/env"
+. "$HOME/.cargo/env"
